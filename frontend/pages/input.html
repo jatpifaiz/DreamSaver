@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Input Goals</title>
+    <link rel="stylesheet" href="/frontend/css/input.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Set Goal</h1>
+      <button id="back" class="back-button">X</button>
+    </header>
+    <main>
+      <section class="detail-container">
+        <div>
+          <div class="detail-item">
+            <label for="image">Image</label>
+            <input
+              type="file"
+              class="image-input"
+              id="image"
+              name="image"
+              accept="image/*"
+              required
+            />
+            <img id="preview" style="max-width: 200px; display: none" />
+          </div>
+
+          <div class="detail-item">
+            <label for="name">Name</label>
+            <input
+              id="name"
+              type="text"
+              name="name"
+              placeholder="Name Goals"
+              required
+            />
+          </div>
+
+          <hr />
+
+          <div class="detail-item">
+            <label for="goal-saving">Goal Saving</label>
+            <input
+              id="goal-saving"
+              type="number"
+              name="goal-saving"
+              placeholder="Rp 0"
+              inputmode="numeric"
+              required
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="detail-container">
+        <div class="detail-item">
+          <label for="category">Category</label>
+          <select name="category" id="category" required>
+            <option value="fashion">Fashion</option>
+            <option value="sport">Sport</option>
+            <option value="casual">Casual</option>
+          </select>
+        </div>
+
+        <hr />
+
+        <div class="detail-item">
+          <label for="priority">Priority</label>
+          <select name="priority" id="priority" required>
+            <option value="primer">Primer</option>
+            <option value="sekunder">Sekunder</option>
+            <option value="tersier">Tersier</option>
+          </select>
+        </div>
+
+        <hr />
+
+        <div class="detail-item">
+          <label for="currency">Currency</label>
+          <select name="currency" id="currency">
+            <option value="idr">IDR</option>
+            <option value="usd">USD</option>
+          </select>
+        </div>
+      </section>
+
+      <section class="detail-container">
+        <div class="detail-item">
+          <label for="start-date">Start Date</label>
+          <input type="date" name="start-date" id="start-date" />
+        </div>
+
+        <hr />
+
+        <div class="detail-item">
+          <label for="saving-frequency">Saving Frequency</label>
+          <select name="saving-frequency" id="saving-frequency">
+            <option value="daily">Daily</option>
+            <option value="weekly">Weekly</option>
+            <option value="monthly">Monthly</option>
+          </select>
+        </div>
+
+        <hr />
+
+        <div class="detail-item">
+          <label for="saving-amount">Saving Amount</label>
+          <p><span id="saving-amount"></span></p>
+        </div>
+      </section>
+
+      <section class="detail-container">
+        <p>Estimasi Selesai: <span id="estimated"></span></p>
+        <hr />
+        <!-- <span id="recFreq"></span> -->
+        <p>Finish dalam: <span id="total-days"></span></p>
+      </section>
+
+      <button id="submit-button" class="submit-button">Submit</button>
+    </main>
+
+    <script type="module" src="/frontend/js/input.js"></script>
+  </body>
+</html>
