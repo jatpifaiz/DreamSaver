@@ -11,6 +11,11 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="frontend/css/style.css" />
+
+    <script
+      src="https://kit.fontawesome.com/7e50d5f440.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <!-- <div class="wrapper"> -->
@@ -18,10 +23,20 @@
       <h1 class="sidebar-title">SanaBung</h1>
       <nav class="navigation">
         <ul class="navigation-items">
-          <li class="navigation-item"><a href="">Dashboard</a></li>
-          <li class="navigation-item"><a href="">Goals</a></li>
-          <li class="navigation-item"><a href="">Statistics</a></li>
-          <li class="navigation-item"><a href="">Goals</a></li>
+          <li class="navigation-item">
+            <a href=""
+              ><i class="fa-solid fa-house-chimney fa-fw"></i>Dashboard</a
+            >
+          </li>
+          <li class="navigation-item">
+            <a href=""><i class="fa-solid fa-calendar fa-fw"></i>Schedule</a>
+          </li>
+          <li class="navigation-item">
+            <a href=""><i class="fa-solid fa-chart-bar fa-fw"></i>Statistics</a>
+          </li>
+          <li class="navigation-item">
+            <a href=""><i class="fa-solid fa-bullseye fa-fw"></i>Goals</a>
+          </li>
         </ul>
       </nav>
     </aside>
@@ -30,10 +45,15 @@
 
     <main class="main">
       <header class="header">
-        <input type="text" placeholder="Search goals..." />
-        <div>
-          <button class="btn-notification">🔔</button>
-          <button class="btn-profile">👤</button>
+        <div class="searchbar-container">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" placeholder="Search goals..." class="searchbar" />
+        </div>
+        <div class="button-container">
+          <button class="btn notification">
+            <i class="fa-regular fa-bell"></i>
+          </button>
+          <button class="btn profile"><i class="fa-solid fa-user"></i></button>
         </div>
       </header>
       <div class="dashboard-grid">
