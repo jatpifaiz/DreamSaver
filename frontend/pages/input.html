@@ -48,7 +48,7 @@
       </header>
 
       <section class="goal-information">
-        <h2>Goal Information</h2>
+        <h2 class="goal-information-title">Goal Information</h2>
         <div class="goal-image-container">
           <div class="goal-image-upload-container">
             <h3>Goal Image</h3>
@@ -79,7 +79,7 @@
             <h3>Preview</h2>
             <div class="goal-image-preview">
               <img id="preview" style="max-width: 200px; display: none" />
-              <div>
+              <div class="image-information">
                 <h2>Goal Image</h2>
                 <p>Goal Information</p>
               </div>
@@ -153,7 +153,7 @@
       </section>
 
       <section class="saving-plan">
-        <h2>Saving Plan</h2>
+        <h2 class="saving-plan-title">Saving Plan</h2>
         <div class="field-container">
           <div class="field">
             <label for="start-date">Start Date</label>
@@ -172,7 +172,7 @@
       </section>
 
       <section class="system-calculation">
-        <h2>System Calculation</h2>
+        <h2 class="system-calculation-title">System Calculation</h2>
         <div class="fields-container">
           <div class="field">
             <label for="saving-amount">Recommended Saving</label>
@@ -192,7 +192,9 @@
         <!-- <span id="recFreq"></span> -->
       </section>
 
-      <button id="submit-button" class="submit-button">Submit</button>
+      <div class="submit-button-container">
+        <button id="submit-button" class="submit-button">Submit</button>
+      </div>
     </main>
 
     <script type="module" src="/frontend/js/input.js"></script>
