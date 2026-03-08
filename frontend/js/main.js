@@ -1,4 +1,4 @@
-import { formatTanggalSingkat } from "../components/formatDate.js";
+import { formatTanggalSingkat } from "./utils/format-date.js";
 
 const addGoalHandler = document.getElementById("add-goal-handler");
 addGoalHandler.addEventListener("click", () => {
