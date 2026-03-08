@@ -5,30 +5,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Input Goals</title>
     <link rel="stylesheet" href="/frontend/css/input.css" />
+
+    <script
+      src="https://kit.fontawesome.com/7e50d5f440.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <header>
-      <h1>Set Goal</h1>
-      <button id="back" class="back-button">X</button>
-    </header>
-    <main>
-      <section class="detail-container">
+    <aside class="sidebar">
+      <h1 class="sidebar-title">SanaBung</h1>
+      <nav class="navigation">
+        <ul class="navigation-items">
+          <li class="navigation-item">
+            <a href=""
+              ><i class="fa-solid fa-house-chimney fa-fw"></i>Dashboard</a
+            >
+          </li>
+          <li class="navigation-item">
+            <a href=""><i class="fa-solid fa-calendar fa-fw"></i>Schedule</a>
+          </li>
+          <li class="navigation-item">
+            <a href=""><i class="fa-solid fa-chart-bar fa-fw"></i>Statistics</a>
+          </li>
+          <li class="navigation-item">
+            <a href="frontend/pages/goals.html"
+              ><i class="fa-solid fa-bullseye fa-fw"></i>Goals</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <div class="vertical-line"></div>
+
+    <main class="main">
+      <header class="header">
         <div>
-          <div class="detail-item">
-            <label for="image">Image</label>
-            <input
-              type="file"
-              class="image-input"
-              id="image"
-              name="image"
-              accept="image/*"
-              required
-            />
-            <img id="preview" style="max-width: 200px; display: none" />
+          <h1>Set Goal</h1>
+          <p><a href="/index.html">Dashboard </a>/ Set Goal</p>
+        </div>
+        <button id="back" class="back-button">X</button>
+      </header>
+
+      <section class="goal-information">
+        <h2>Goal Information</h2>
+        <div class="goal-image-container">
+          <div class="goal-image-upload-container">
+            <h3>Goal Image</h3>
+            <div class="goal-image-upload-area">
+              <input
+                type="file"
+                id="image"
+                name="image"
+                accept="image/*"
+                required
+                hidden
+              />
+
+              <div class="goal-image-upload">
+                <div class="upload-icon">
+                  <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                </div>
+                <p>PNG, JPEG, JPG, WBEP</p>
+
+                <button id="upload-button" class="upload-button">
+                  Upload Image
+                </button>
+              </div>
+            </div>
           </div>
 
-          <div class="detail-item">
-            <label for="name">Name</label>
+          <div class="goal-image-preview-container">
+            <h3>Preview</h2>
+            <div class="goal-image-preview">
+              <img id="preview" style="max-width: 200px; display: none" />
+              <div>
+                <h2>Goal Image</h2>
+                <p>Goal Information</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="goal-primary-fields">
+          <div class="goal-name field">
+            <label for="name" class="field-title">Name</label>
             <input
               id="name"
               type="text"
@@ -38,10 +99,8 @@
             />
           </div>
 
-          <hr />
-
-          <div class="detail-item">
-            <label for="goal-saving">Goal Saving</label>
+          <div class="saving-target field">
+            <label for="goal-saving" class="field-title">Goal Saving</label>
             <input
               id="goal-saving"
               type="number"
@@ -52,70 +111,85 @@
             />
           </div>
         </div>
-      </section>
 
-      <section class="detail-container">
-        <div class="detail-item">
-          <label for="category">Category</label>
-          <select name="category" id="category" required>
-            <option value="fashion">Fashion</option>
-            <option value="sport">Sport</option>
-            <option value="casual">Casual</option>
-          </select>
+        <div class="description-container">
+          <label for="description">Description</label>
+          <textarea
+            id="description"
+            name="description"
+            placeholder="Describe your goal..."
+            rows="5"
+            class="description"
+          ></textarea>
         </div>
 
-        <hr />
+        <div class="goal-settings">
+          <div class="field">
+            <label for="category">Category</label>
+            <select name="category" id="category" required>
+              <option value="fashion">Fashion</option>
+              <option value="sport">Sport</option>
+              <option value="casual">Casual</option>
+            </select>
+          </div>
 
-        <div class="detail-item">
-          <label for="priority">Priority</label>
-          <select name="priority" id="priority" required>
-            <option value="primer">Primer</option>
-            <option value="sekunder">Sekunder</option>
-            <option value="tersier">Tersier</option>
-          </select>
-        </div>
+          <div class="field">
+            <label for="priority">Priority</label>
+            <select name="priority" id="priority" required>
+              <option value="primer">Primer</option>
+              <option value="sekunder">Sekunder</option>
+              <option value="tersier">Tersier</option>
+            </select>
+          </div>
 
-        <hr />
-
-        <div class="detail-item">
-          <label for="currency">Currency</label>
-          <select name="currency" id="currency">
-            <option value="idr">IDR</option>
-            <option value="usd">USD</option>
-          </select>
-        </div>
-      </section>
-
-      <section class="detail-container">
-        <div class="detail-item">
-          <label for="start-date">Start Date</label>
-          <input type="date" name="start-date" id="start-date" />
-        </div>
-
-        <hr />
-
-        <div class="detail-item">
-          <label for="saving-frequency">Saving Frequency</label>
-          <select name="saving-frequency" id="saving-frequency">
-            <option value="daily">Daily</option>
-            <option value="weekly">Weekly</option>
-            <option value="monthly">Monthly</option>
-          </select>
-        </div>
-
-        <hr />
-
-        <div class="detail-item">
-          <label for="saving-amount">Saving Amount</label>
-          <p><span id="saving-amount"></span></p>
+          <div class="field">
+            <label for="currency">Currency</label>
+            <select name="currency" id="currency">
+              <option value="idr">IDR</option>
+              <option value="usd">USD</option>
+            </select>
+          </div>
         </div>
       </section>
 
-      <section class="detail-container">
-        <p>Estimasi Selesai: <span id="estimated"></span></p>
-        <hr />
+      <section class="saving-plan">
+        <h2>Saving Plan</h2>
+        <div class="field-container">
+          <div class="field">
+            <label for="start-date">Start Date</label>
+            <input type="date" name="start-date" id="start-date"/>
+          </div>
+
+          <div class="field">
+            <label for="saving-frequency">Saving Frequency</label>
+            <select name="saving-frequency" id="saving-frequency">
+              <option value="daily">Daily</option>
+              <option value="weekly">Weekly</option>
+              <option value="monthly">Monthly</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <section class="system-calculation">
+        <h2>System Calculation</h2>
+        <div class="fields-container">
+          <div class="field">
+            <label for="saving-amount">Recommended Saving</label>
+            <p class="calculation-result"><span id="saving-amount"></span></p>
+          </div>
+
+          <div class="field">
+            <label for="estimated-completion">Estimated Completion</label>
+            <p class="calculation-result"><span id="estimated"></span></p>
+          </div>
+
+          <div class="field">
+            <label for="estimated-durration-days">Time Needed</label>
+            <p class="calculation-result"><span id="total-days"></span></p>
+          </div>
+        </div>
         <!-- <span id="recFreq"></span> -->
-        <p>Finish dalam: <span id="total-days"></span></p>
       </section>
 
       <button id="submit-button" class="submit-button">Submit</button>
