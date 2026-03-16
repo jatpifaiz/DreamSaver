@@ -11,6 +11,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="frontend/css/style.css" />
+    <link rel="stylesheet" href="frontend/css/sidebar.css" />
 
     <script
       src="https://kit.fontawesome.com/7e50d5f440.js"
@@ -18,29 +19,33 @@
     ></script>
   </head>
   <body>
-    <aside class="sidebar">
-      <h1 class="sidebar-title">SanaBung</h1>
-      <nav class="navigation">
-        <ul class="navigation-items">
-          <li class="navigation-item">
-            <a href=""
-              ><i class="fa-solid fa-house-chimney fa-fw"></i>Dashboard</a
-            >
-          </li>
-          <li class="navigation-item">
-            <a href=""><i class="fa-solid fa-calendar fa-fw"></i>Schedule</a>
-          </li>
-          <li class="navigation-item">
-            <a href=""><i class="fa-solid fa-chart-bar fa-fw"></i>Statistics</a>
-          </li>
-          <li class="navigation-item">
-            <a href="frontend/pages/goals.html"
-              ><i class="fa-solid fa-bullseye fa-fw"></i>Goals</a
-            >
-          </li>
-        </ul>
-      </nav>
-    </aside>
+    <div id="sidebar-container">
+      <!-- <aside class="sidebar">
+        <h1 class="sidebar-title">SanaBung</h1>
+        <nav class="navigation">
+          <ul class="navigation-items">
+            <li class="navigation-item">
+              <a href=""
+                ><i class="fa-solid fa-house-chimney fa-fw"></i>Dashboard</a
+              >
+            </li>
+            <li class="navigation-item">
+              <a href=""><i class="fa-solid fa-calendar fa-fw"></i>Schedule</a>
+            </li>
+            <li class="navigation-item">
+              <a href=""
+                ><i class="fa-solid fa-chart-bar fa-fw"></i>Statistics</a
+              >
+            </li>
+            <li class="navigation-item">
+              <a href="frontend/pages/goals.html"
+                ><i class="fa-solid fa-bullseye fa-fw"></i>Goals</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </aside> -->
+    </div>
 
     <div class="vertical-line"></div>
 
@@ -91,5 +96,6 @@
     </main>
 
     <script type="module" src="/frontend/js/main.js"></script>
+    <script type="module" src="frontend/js/utils/sidebar.js"></script>
   </body>
 </html>
