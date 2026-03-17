@@ -1,0 +1,22 @@
+.header-container .header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 20px;
+  margin: 6px 0;
+}
+
+.header-container .header .back-button {
+  border: 1px solid black;
+  border-radius: 6px;
+  padding: 10px;
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+
+.header-container .header .back-button:hover {
+  background-color: #1a1a1a;
+  color: #f5f5f5;
+  transform: scale(1.01);
+}

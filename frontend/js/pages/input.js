@@ -18,8 +18,8 @@ const imageItem = document.getElementById("image");
 const preview = document.getElementById("preview");
 const totalDays = document.getElementById("total-days");
 
-const backBtn = document.getElementById("back");
-backButton(backBtn, "../index.html");
+// const backBtn = document.getElementById("back");
+// backButton(backBtn, "../index.html");
 
 let imageData = null;
 
